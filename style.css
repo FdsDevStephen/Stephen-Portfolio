@@ -13,6 +13,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 p {
@@ -36,13 +37,32 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 13vh;
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+}
+
+#desktop-nav, #hamburger-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f8f8f8; /* Adjust as needed */
+  z-index: 1000; /* Optional: adds a slight shadow */
+}
+
+#desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+#hamburger-nav {
+  display: none; /* Show only in mobile view using media queries */
+  padding: 10px 20px;
 }
 
 a {
@@ -104,6 +124,8 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+
+
 .menu-links a {
   display: block;
   padding: 10px;
@@ -150,8 +172,8 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  height: 100vh;
+  margin: 7rem 10rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -164,15 +186,15 @@ section {
 
 #profile {
   display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  justify-content: space-evenly;
+  gap: 8rem;
+  height: 100vh;
 }
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   margin: auto 0;
 }
 
@@ -182,7 +204,7 @@ section {
 }
 
 .section__text p {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .section__text__p1 {
@@ -190,8 +212,8 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .title {
@@ -422,11 +444,43 @@ article .icon {
 
 /* FOOTER SECTION */
 
-footer {
-  height: 26vh;
-  margin: 0 1rem;
-}
 
 footer p {
   text-align: center;
+}
+
+/* Make sure the entire page takes full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Allow main content to expand while pushing footer down */
+#contact {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh; /* Ensures full screen height */
+  padding-bottom: 0; /* Prevents extra spacing */
+}
+
+#contact div{
+  margin-bottom: 2rem;
+}
+
+/* Pushes the footer down while keeping space between content */
+footer {
+  margin-top: 10rem; /* Pushes it to the bottom naturally */
+  height: 12vh; /* Adjust if needed */
+  text-align: center;
+}
+
+#asd{
+  background-color: #f8f8f8;
+}
+
+footer p{
+  margin-top: -30px;
 }
