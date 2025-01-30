@@ -8,9 +8,8 @@ function toggleMenu() {
 const titles = [
   "Frontend Developer",
   "Data Analyst",
-  "Full-Stack Development",
-  "UI/UX Design",
-  "Software Engineering",
+  "AI Engineer",
+  "Software Engineer",
 ];
 
 let index = 0;
