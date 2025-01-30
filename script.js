@@ -6,14 +6,14 @@ function toggleMenu() {
 }
 
 const titles = [
-  "Frontend Development",
-  "Backend Development",
+  "Frontend Developer",
+  "Data Analyst",
   "Full-Stack Development",
   "UI/UX Design",
   "Software Engineering",
 ];
 
-let index = 0; // Start index
+let index = 0;
 
 function changeTitle() {
   index = (index + 1) % titles.length; // Loop through array
@@ -21,3 +21,7 @@ function changeTitle() {
 }
 
 setInterval(changeTitle, 2000);
+
+document.getElementById("logo").addEventListener("click", function () {
+  window.location.href = "index.html"; // Change "index.html" to your actual homepage URL
+});
